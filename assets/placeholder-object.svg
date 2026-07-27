@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+<path d="M300 70c110 0 200 90 200 200 0 155-200 270-200 270S100 425 100 270C100 160 190 70 300 70z" fill="#b7c7d8" stroke="#eee" stroke-width="8"/>
+<circle cx="300" cy="260" r="105" fill="#f3f0e8"/>
+<text x="300" y="255" text-anchor="middle" font-family="monospace" font-size="25" fill="#252525">DECORATIVE</text>
+<text x="300" y="292" text-anchor="middle" font-family="monospace" font-size="25" fill="#252525">OBJECT</text>
+</svg>
