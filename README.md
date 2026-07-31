@@ -1,124 +1,47 @@
-# Parameterized Wedding Website Template
+# Fixed Artboard Wedding Site
 
-This is a blank, customizable static wedding website inspired by a scrapbook/collage layout.
+This version keeps every canvas page on a fixed 1600 × 900 design artboard and scales the entire artboard uniformly to fit the available browser area.
 
-## Open it
+## Replace these files
 
-Double-click `index.html`.
+- `app.js`
+- `styles.css`
+- `content.js`
+- `index.html`
 
-For best results, run it through a small local server:
+Keep your existing `assets` folder.
+
+## Run locally
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then open `http://localhost:8000`.
+Then open `http://localhost:8000` and hard-refresh with Command + Shift + R.
 
-## Main customization file
+## Positioning
 
-Edit `content.js`.
-
-You can change:
-
-- names, date, and location
-- colors and fonts
-- background image
-- navigation labels
-- page order
-- event details
-- hotel and travel information
-- RSVP and registry links
-- recommendation cards
-- every object’s position, size, rotation, and stacking order
-
-## Canvas positioning
-
-Each object can use:
+Your existing values still work:
 
 ```js
-x: 50,
-y: 50,
-width: 400,
-rotation: -3,
-zIndex: 2
+x: 58,
+y: 45,
+width: 480,
+rotation: -2,
+zIndex: 1
 ```
 
-- `x`: horizontal position from 0–100%
-- `y`: vertical position from 0–100%
-- `width`: width in pixels
-- `rotation`: degrees
-- `zIndex`: which object sits on top
+The difference is that the entire 1600 × 900 composition now scales together. Objects do not stack on mobile and pages reserve their own height, so one section cannot spill into the next.
 
-## Object types
-
-### Paper
+## Optional mobile override
 
 ```js
-{
-  kind: "paper",
-  paperStyle: "lined", // optional: "lined" or "crumpled"
-  title: "Title",
-  body: "Your text",
-  x: 50, y: 50, width: 400, rotation: 0, zIndex: 1
+mobile: {
+  x: 45,
+  y: 55,
+  width: 300,
+  rotation: -4
 }
 ```
 
-### Photo
-
-```js
-{
-  kind: "photo",
-  src: "assets/your-photo.jpg",
-  alt: "Description",
-  x: 50, y: 50, width: 250, rotation: 4, zIndex: 2
-}
-```
-
-### Transparent image or decorative object
-
-```js
-{
-  kind: "image",
-  src: "assets/your-object.png",
-  alt: "Description",
-  x: 50, y: 50, width: 250, rotation: 0, zIndex: 2
-}
-```
-
-### Button
-
-```js
-{
-  kind: "button",
-  label: "RSVP here",
-  href: "https://your-rsvp-link.com",
-  x: 50, y: 50, width: 350, rotation: 0, zIndex: 2
-}
-```
-
-## Adding images
-
-Put JPG, PNG, SVG, or WebP files in the `assets` folder, then use:
-
-```js
-src: "assets/file-name.png"
-```
-
-Transparent PNGs work especially well for decorative objects.
-
-## Fonts
-
-The starter uses system fonts so it works immediately. To use custom web fonts, add the font import to `styles.css`, then change `bodyFont` or `displayFont` in `content.js`.
-
-Only use fonts you are licensed to publish online.
-
-## Publishing
-
-This folder can be deployed directly to:
-
-- GitHub Pages
-- Netlify
-- Vercel
-- Cloudflare Pages
-
-No build process is required.
+This is optional. Without it, mobile uses the exact desktop composition, uniformly scaled.
