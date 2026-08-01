@@ -1,47 +1,39 @@
-# Fixed Artboard Wedding Site
+# Responsive Artboard Wedding Site
 
-This version keeps every canvas page on a fixed 1600 × 900 design artboard and scales the entire artboard uniformly to fit the available browser area.
+This build keeps the existing 1600 × 900 desktop compositions and introduces a dedicated 430 × 932 portrait artboard for phones. Both layouts use the same page content and assets from `content.js`.
 
-## Replace these files
+## Files
 
+- `index.html`
 - `app.js`
 - `styles.css`
 - `content.js`
-- `index.html`
+- `assets/` — all uploaded image assets
+- `CNAME`
 
-Keep your existing `assets` folder.
+The font declarations are preserved. Copy your existing font files into `assets/fonts/`:
 
-## Run locally
+- `RASCAL__.TTF`
+- `XanhMono-Regular.ttf`
+- `PPPlayground-Medium.otf`
+- `DepartureMono-Regular.otf`
+
+The site has fallback fonts and still renders when those files are absent.
+
+## Local preview
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then open `http://localhost:8000` and hard-refresh with Command + Shift + R.
+Open `http://localhost:8000`.
 
-## Positioning
+## Editing positions
 
-Your existing values still work:
-
-```js
-x: 58,
-y: 45,
-width: 480,
-rotation: -2,
-zIndex: 1
-```
-
-The difference is that the entire 1600 × 900 composition now scales together. Objects do not stack on mobile and pages reserve their own height, so one section cannot spill into the next.
-
-## Optional mobile override
+Desktop values remain unchanged. Each item can also contain one mobile override:
 
 ```js
-mobile: {
-  x: 45,
-  y: 55,
-  width: 300,
-  rotation: -4
-}
+mobile: { x: 50, y: 65, width: 300, rotation: -2 }
 ```
 
-This is optional. Without it, mobile uses the exact desktop composition, uniformly scaled.
+The mobile values are evaluated against the portrait artboard, not the desktop artboard.
