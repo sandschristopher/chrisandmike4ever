@@ -63,10 +63,17 @@
   function renderCanvasItem(item) {
     const mobile = item.mobile || {};
     const style = [
-      `--x:${number(item.x, 50)}%`, `--y:${number(item.y, 50)}%`, `--w:${number(item.width, 300)}px`,
-      `--rotate:${number(item.rotation, 0)}deg`, `--z:${number(item.zIndex, 1)}`,
-      `--mx:${number(mobile.x, item.x ?? 50)}%`, `--my:${number(mobile.y, item.y ?? 50)}%`,
-      `--mw:${number(mobile.width, item.width ?? 300)}px`, `--mrotate:${number(mobile.rotation, item.rotation ?? 0)}deg`
+      `--x:${number(item.x, 50)}%`,
+      `--y:${number(item.y, 50)}%`,
+      `--w:${number(item.width, 300)}px`,
+      `--rotate:${number(item.rotation, 0)}deg`,
+      `--z:${number(item.zIndex, 1)}`,
+
+      `--mx:${number(mobile.x, item.x ?? 50)}%`,
+      `--my:${number(mobile.y, item.y ?? 50)}%`,
+      `--mw:${number(mobile.width, item.width ?? 300)}px`,
+      `--mrotate:${number(mobile.rotation, item.rotation ?? 0)}deg`,
+      `--mz:${number(mobile.zIndex, item.zIndex ?? 1)}`
     ].join(";");
 
     let html = "";

@@ -116,7 +116,7 @@ const site = {
           kind: "paper", title: "Ground Travel",
           body: "The easiest way to get around NYC is by subway, bus, Uber/Lyft, or yellow taxi. Subway & bus fare can be paid directly at the turnstile using Apple Pay or a contactless credit card... RIP MetroCard &lt;/3",
           x: 82, y: 56, width: 320, rotation: 4, zIndex: 3,
-          mobile: { x: 49, y: 83, width: 352, rotation: -1 }
+          mobile: { x: 49, y: 84, width: 352, rotation: -1 }
         },
         {
           kind: "image", src: "assets/HotAirBalloonOfLove1.png", alt: "Heart-patterned hot-air balloon",
@@ -139,18 +139,18 @@ const site = {
         {
           kind: "image", src: "assets/EngagementParty.png", alt: "Christopher and Michael at their engagement party",
           x: 38, y: 50, width: 380, rotation: -3, zIndex: 2,
-          mobile: { x: 50, y: 37.5, width: 250, rotation: -2 }
+          mobile: { x: 40, y: 40, width: 300, rotation: -2, zIndex: 1 }
         },
         {
           kind: "image", src: "assets/Letter.png", alt: "Decorative open envelope",
           x: 62, y: 48, width: 300, rotation: 5, zIndex: 1,
-          mobile: { x: 50, y: 78, width: 295, rotation: 3 }
+          mobile: { x: 65, y: 68, width: 295, rotation: 3, zIndex: 2}
         },
         {
           kind: "button", label: "RSVP here",
           href: "https://withjoy.com/christopher-and-michael-may-2027/rsvp?utm_medium=web&utm_source=joy&utm_campaign=share_website_dialog",
           x: 62.5, y: 48, width: 360, rotation: 3.1, zIndex: 3,
-          mobile: { x: 50, y: 79, width: 280, rotation: 1.5 }
+          mobile: { x: 65.25, y: 70, width: 280, rotation: 2, zIndex: 3 }
         }
       ]
     },
@@ -165,12 +165,12 @@ const site = {
           body: "Celebrating with you is the best gift we could receive. If you'd like to help us begin this next chapter, we've created a registry below with a few things we'd truly appreciate.",
           links: [{ label: "View our registry", href: "https://withjoy.com/christopher-and-michael-may-2027/registry?utm_medium=web&utm_source=joy&utm_campaign=share_website_dialog" }],
           x: 50, y: 47, width: 600, rotation: 0, zIndex: 1,
-          mobile: { x: 49, y: 42, width: 360, rotation: -1 }
+          mobile: { x: 49, y: 50, width: 360, rotation: -1 }
         },
         {
           kind: "image", src: "assets/HeartClam.png", alt: "Heart-shaped oyster shell with a pearl",
           x: 70, y: 68, width: 340, rotation: 8, zIndex: 2,
-          mobile: { x: 78, y: 55, width: 150, rotation: 5 }
+          mobile: { x: 78, y: 63, width: 150, rotation: 5 }
         }
       ]
     },
