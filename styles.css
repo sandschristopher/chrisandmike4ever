@@ -34,7 +34,8 @@
   --background: #111111;
   --background-image: none;
 
-  --text: #eeeeea;
+  --text: #222625;          /* page text */
+  --nav-text: #eeeeea;      /* navigation only */
   --paper: #f3f0e8;
   --paper-text: #252525;
   --accent: #b7c7d8;
@@ -47,7 +48,7 @@
   --body-font: "Courier New", Courier, monospace;
   --display-font: Georgia, "Times New Roman", serif;
 
-  --shadow: 0 14px 35px rgba(0, 0, 0, 0.32);
+  --shadow: 0 14px 35px rgba(0, 0, 0, 0.25);
   --artboard-scale: 1;
 }
 
@@ -206,7 +207,7 @@ body {
   font-weight: 400;
   line-height: 0.95;
 
-  text-shadow: 2px 2px 0 #000;
+  text-shadow: 2px 2px 0 #e9e0d9ff;
 }
 
 .artboard-intro {
@@ -351,6 +352,11 @@ body {
   max-height: 760px;
 }
 
+.canvas-item.has-item-blur .image-only img,
+.canvas-item.has-item-blur .photo img {
+  filter: blur(var(--blur, 0px));
+}
+
 /* =========================================================
    PAPER LINKS
 ========================================================= */
@@ -426,7 +432,7 @@ body {
     calc(2px * var(--artboard-scale))
     calc(2px * var(--artboard-scale))
     0
-    #000;
+    #e9e0d9ff;
 }
 
 .cards-grid {
@@ -470,6 +476,201 @@ body {
   white-space: pre-line;
 
   line-height: 1.55;
+}
+
+/* =========================================================
+   INTERACTIVE RECOMMENDATIONS MAP
+========================================================= */
+
+.recommendation-map-shell {
+  width: min(100%, 1180px);
+  margin: 0 auto clamp(34px, 5vw, 64px);
+  padding: clamp(18px, 2.5vw, 30px);
+  color: var(--paper-text);
+  background: color-mix(in srgb, var(--paper) 94%, transparent);
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  box-shadow: var(--shadow);
+}
+
+.map-heading-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.map-title {
+  margin: 0 0 5px;
+  font-family: var(--display-font);
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.map-help {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.map-reset,
+.map-filter {
+  border: 1px solid rgba(34, 38, 37, 0.45);
+  border-radius: 999px;
+  color: var(--paper-text);
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.map-reset {
+  flex: 0 0 auto;
+  padding: 8px 13px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.map-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 0 16px;
+}
+
+.map-filter {
+  padding: 7px 12px;
+  font-size: 0.82rem;
+}
+
+.map-filter[aria-pressed="true"] {
+  color: var(--paper);
+  background: var(--paper-text);
+}
+
+.map-filter:hover,
+.map-reset:hover {
+  transform: translateY(-1px);
+}
+
+.map-filter:focus-visible,
+.map-reset:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.recommendation-map {
+  position: relative;
+  width: 100%;
+  height: clamp(400px, 56vh, 590px);
+  min-height: 360px;
+  overflow: hidden;
+  border: 1px solid rgba(34, 38, 37, 0.2);
+  background: #d8ddd8;
+}
+
+.recommendation-map.map-unavailable::before {
+  content: "Interactive map unavailable";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 30px;
+  color: var(--paper-text);
+  background: var(--paper);
+  text-align: center;
+}
+
+.map-fallback {
+  margin: 12px 0 0;
+  font-size: 0.85rem;
+}
+
+.recommendation-marker-wrap {
+  background: transparent;
+  border: 0;
+}
+
+.recommendation-marker {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  color: #c76969;
+  font-family: Georgia, serif;
+  font-size: 31px;
+  line-height: 1;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.45));
+  transform-origin: 50% 80%;
+  transition: transform 150ms ease;
+}
+
+.leaflet-marker-icon:hover .recommendation-marker,
+.leaflet-marker-icon:focus .recommendation-marker {
+  transform: scale(1.18);
+}
+
+.leaflet-container {
+  font-family: var(--body-font);
+}
+
+.leaflet-control-zoom a {
+  color: var(--paper-text);
+}
+
+.leaflet-control-attribution a[href*="leaflet"] {
+    display: none;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  color: var(--paper-text);
+  background: var(--paper);
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 1px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+.leaflet-popup-content {
+  margin: 18px 20px;
+  line-height: 1.42;
+}
+
+.map-popup-content h4 {
+  margin: 0 0 8px;
+  font-family: var(--display-font);
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.map-popup-category {
+  margin: 0 0 7px;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.map-popup-description,
+.map-popup-neighborhood {
+  margin: 0 0 9px;
+  font-size: 0.88rem;
+}
+
+.map-popup-neighborhood {
+  opacity: 0.7;
+}
+
+.map-popup-content a {
+  color: inherit;
+  font-size: 0.85rem;
+  text-underline-offset: 3px;
 }
 
 /* =========================================================
@@ -518,7 +719,7 @@ body {
 .site-nav a {
   flex: 0 0 auto;
 
-  color: var(--text);
+  color: var(--nav-text);
 
   font-size: clamp(0.72rem, 1vw, 0.95rem);
   text-underline-offset: 4px;
@@ -588,6 +789,11 @@ body {
       rotate(var(--mrotate, var(--rotate, 0deg)));
   }
 
+  .canvas-item.has-item-blur .image-only img,
+  .canvas-item.has-item-blur .photo img {
+  filter: blur(var(--mblur, var(--blur, 0px)));
+  } 
+
   /* ---------------- Mobile papers ---------------- */
 
   .paper {
@@ -629,9 +835,51 @@ body {
   /* ---------------- Mobile navigation ---------------- */
 
   .site-nav {
-    justify-content: flex-start;
+    justify-content: center;
+    gap: 18px;
+    width: 100%;
+  }
 
-    gap: 24px;
+  /* ---------------- Mobile recommendations map ---------------- */
+
+  .recommendation-map-shell {
+    width: min(350px, 92vw);
+    margin-bottom: 30px;
+    padding: 14px;
+  }
+
+  .map-heading-row {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .map-title {
+    font-size: 2rem;
+  }
+
+  .map-help {
+    max-width: 230px;
+    font-size: 0.78rem;
+  }
+
+  .map-reset {
+    padding: 7px 10px;
+    font-size: 0.72rem;
+  }
+
+  .map-filters {
+    gap: 6px;
+  }
+
+  .map-filter {
+    padding: 6px 9px;
+    font-size: 0.7rem;
+  }
+
+  .recommendation-map {
+    height: 430px;
+    min-height: 430px;
+    touch-action: pan-x pan-y;
   }
 
   /* ---------------- Recommendations page ---------------- */
