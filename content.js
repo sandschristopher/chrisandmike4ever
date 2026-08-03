@@ -177,7 +177,7 @@ const site = {
     {
       id: "recommendations",
       type: "cards",
-      heading: "Neighborhood Recommendations",
+      heading: "",
       map: {
         maxZoom: 14,
         places: [
