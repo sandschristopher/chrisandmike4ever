@@ -79,7 +79,7 @@ const site = {
           kind: "paper", paperStyle: "crumpled", title: "Afters...",
           body: "<b>Saturday, May 15</b>\n10:00 PM–late\n\n<b>Jupiter Disco</b>\n1237 Flushing Ave.\nBrooklyn, NY 11237\n\nMusic by <b>Love Injection</b>\nAges 21+",
           x: 77, y: 52, width: 330, rotation: 5, zIndex: 2,
-          mobile: { x: 50, y: 88, width: 330, rotation: -1 }
+          mobile: { x: 50, y: 87, width: 330, rotation: -1 }
         }
       ]
     },
