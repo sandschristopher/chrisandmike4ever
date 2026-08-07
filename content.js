@@ -116,7 +116,7 @@ const site = {
           kind: "paper", title: "Ground Travel",
           body: "The easiest way to get around NYC is by subway, bus, Uber/Lyft, or yellow taxi. Subway & bus fare can be paid directly at the turnstile using Apple Pay or a contactless credit card... RIP MetroCard &lt;/3",
           x: 82, y: 56, width: 320, rotation: 4, zIndex: 3,
-          mobile: { x: 49, y: 84, width: 352, rotation: -1 }
+          mobile: { x: 49, y: 83, width: 352, rotation: -1 }
         },
         {
           kind: "image", src: "assets/HotAirBalloonOfLove1.png", alt: "Heart-patterned hot-air balloon",
