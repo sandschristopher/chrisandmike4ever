@@ -37,7 +37,7 @@ const site = {
         {
           kind: "image",
           src: "assets/ChristopherAndMichael.png",
-          x: 50, y: 50, width: 1200, rotation: -3, zIndex: 4,
+          x: 51, y: 50, width: 1200, rotation: -3, zIndex: 4,
           mobile: { x: 50, y: 50, width: 450, rotation: -3 }
         },
         {
