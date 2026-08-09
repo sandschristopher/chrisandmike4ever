@@ -15,6 +15,12 @@
 }
 
 @font-face {
+  font-family: "PinyonScript-Regular";
+  src: url("assets/fonts/PinyonScript-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Playground";
   src: url("assets/fonts/PPPlayground-Medium.otf") format("opentype");
   font-display: swap;
@@ -207,7 +213,7 @@ body {
   font-weight: 400;
   line-height: 0.95;
 
-  text-shadow: 2px 2px 0 #e9e0d9ff;
+  text-shadow: 0px 0px 0 #ffffff;
 }
 
 .artboard-intro {

@@ -17,7 +17,7 @@ const site = {
     paperText: "#222625",
     accent: "#b7c7d8",
     bodyFont: '"XanhMono-Regular", "Courier New", monospace',
-    displayFont: '"Playground", Georgia, serif'
+    displayFont: '"PinyonScript-Regular"'
   },
 
   navigation: [
@@ -35,25 +35,24 @@ const site = {
       type: "canvas",
       items: [
         {
-          kind: "paper",
-          title: "Christopher & Michael",
-          body: "May 15, 2027\nNew York City",
-          x: 58, y: 45, width: 600, rotation: -2, zIndex: 1,
-          mobile: { x: 52, y: 50, width: 360, rotation: -2 }
+          kind: "image",
+          src: "assets/ChristopherAndMichael.png",
+          x: 50, y: 50, width: 1200, rotation: -3, zIndex: 4,
+          mobile: { x: 50, y: 50, width: 450, rotation: -3 }
         },
         {
           kind: "image",
           src: "assets/Gay_Guys.png",
           alt: "Illustration of Christopher and Michael holding hands",
-          x: 35, y: 62, width: 250, rotation: -8, zIndex: 3,
-          mobile: { x: 80, y: 59, width: 125, rotation: -6 }
+          x: 29, y: 62, width: 125, rotation: -8, zIndex: 3,
+          mobile: { x: 27, y: 52, width: 40, rotation: -6 }
         },
         {
           kind: "image",
           src: "assets/Gay_Guys_Shadow1.png",
           alt: "",
-          x: 35.25, y: 62, width: 250, rotation: -8, zIndex: 2, blur: 1.5,
-          mobile: { x: 80.5, y: 59, width: 125, rotation: -6, blur: 1.5 }
+          x: 29.2, y: 62, width: 125, rotation: -8, zIndex: 2, blur: 1.5,
+          mobile: { x: 27.25, y: 52, width: 40, rotation: -6, blur: 1.5 }
         }
       ]
     },
@@ -61,7 +60,7 @@ const site = {
     {
       id: "weekend",
       type: "canvas",
-      heading: "Weekend Schedule",
+      heading: "Weekend",
       items: [
         {
           kind: "paper", paperStyle: "crumpled", title: "Welcome Party",
@@ -103,7 +102,7 @@ const site = {
         },
         {
           kind: "image", src: "assets/KissingSwanTowels.png", alt: "Two swan-shaped towels",
-          x: 38, y: 32, width: 320, rotation: 7, zIndex: 4,
+          x: 40.5, y: 30, width: 320, rotation: 7, zIndex: 4,
           mobile: { x: 81, y: 13, width: 155, rotation: 6 }
         },
         {
