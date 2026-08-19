@@ -199,15 +199,6 @@ const site = {
               "href": "https://www.google.com/maps/search/?api=1&query=Variety%20Coffee%20Brooklyn%20NY"
             },
             {
-              "title": "Paloma",
-              "category": "Coffee",
-              "lat": 40.730493,
-              "lng": -73.954918,
-              "neighborhood": "Greenpoint",
-              "description": "Another great spot for coffe & pastries.",
-              "href": "https://www.google.com/maps/search/?api=1&query=Paloma%20Brooklyn%20NY"
-            },
-            {
               "title": "Land To Sea",
               "category": "Coffee",
               "lat": 40.716882,
@@ -222,7 +213,7 @@ const site = {
               "lat": 40.730857,
               "lng": -73.956864,
               "neighborhood": "Greenpoint",
-              "description": "Solid coffee shop.",
+              "description": "Solid coffee shop near the venue!",
               "href": "https://www.google.com/maps/search/?api=1&query=Homecoming%20Brooklyn%20NY"
             },
             {
@@ -240,7 +231,7 @@ const site = {
               "lat": 40.730131,
               "lng": -73.954600,
               "neighborhood": "Greenpoint",
-              "description": "Japanese tea served with care & precision.",
+              "description": "For the tea drinkers...",
               "href": "https://www.google.com/maps/search/?api=1&query=Kettl%20Tea%20Brooklyn%20NY"
             },
             {
@@ -249,7 +240,7 @@ const site = {
               "lat": 40.717640,
               "lng": -73.958360,
               "neighborhood": "Williamsburg",
-              "description": "A favorite for breakfast sandwiches... get the iced café slushie.",
+              "description": "A favorite for breakfast sandwiches... & get the iced café slushie!",
               "href": "https://www.google.com/maps/search/?api=1&query=Edith%27s%20Sandwich%20Counter%20Brooklyn%20NY"
             },
             {
@@ -258,7 +249,7 @@ const site = {
               "lat": 40.731379,
               "lng": -73.955442,
               "neighborhood": "Greenpoint",
-              "description": "Excellent pastries and sandwiches! but go early!",
+              "description": "Incredible pastries and sandwiches... but go early, they are known to sell out!",
               "href": "https://www.google.com/maps/search/?api=1&query=Radio%20Bakery%20Brooklyn%20NY"
             },
             {
@@ -267,7 +258,7 @@ const site = {
               "lat": 40.730506,
               "lng": -73.954933,
               "neighborhood": "Greenpoint",
-              "description": "Insanely good bagels... vegetarians, get the heirloom tomato bagel.",
+              "description": "Insanely good bagels... get the heirloom tomato bagel.",
               "href": "https://www.google.com/maps/search/?api=1&query=Frankel%27s%20Delicatessen%20Brooklyn%20NY"
             },
             {
@@ -276,7 +267,7 @@ const site = {
               "lat": 40.730132,
               "lng": -73.954089,
               "neighborhood": "Greenpoint",
-              "description": "A classic neighborhood diner experience.",
+              "description": "Cutie diner.",
               "href": "https://www.google.com/maps/search/?api=1&query=Three%20Decker%20Diner%20Brooklyn%20NY"
             },
             {
@@ -285,17 +276,8 @@ const site = {
               "lat": 40.677480,
               "lng": -73.972300,
               "neighborhood": "Prospect Heights",
-              "description": "Austin-style breakfast tacos.",
+              "description": "Austin-style breakfast tacos... yum...",
               "href": "https://www.google.com/maps/search/?api=1&query=King%20David%20Tacos%20Brooklyn%20NY"
-            },
-            {
-              "title": "Paulie Gee’s Slice Shop",
-              "category": "Lunch",
-              "lat": 40.729600,
-              "lng": -73.957710,
-              "neighborhood": "Greenpoint",
-              "description": "Yummy pizza.",
-              "href": "https://www.google.com/maps/search/?api=1&query=Paulie%20Gee%E2%80%99s%20Slice%20Shop%20Brooklyn%20NY"
             },
             {
               "title": "Taqueria Ramirez",
@@ -303,7 +285,7 @@ const site = {
               "lat": 40.729288,
               "lng": -73.954144,
               "neighborhood": "Greenpoint",
-              "description": "Small counter-service taqueria with great tacos.",
+              "description": "Small counter-service taqueria with great tacos... great for a quickie!",
               "href": "https://www.google.com/maps/search/?api=1&query=Taqueria%20Ramirez%20Brooklyn%20NY"
             },
             {
@@ -312,7 +294,7 @@ const site = {
               "lat": 40.719493,
               "lng": -73.958021,
               "neighborhood": "Williamsburg",
-              "description": "A compact CDMX taco stop ideal for a quick lunch...so yum.",
+              "description": "A compact CDMX taco stop ideal for a quick lunch...so yum (no seating).",
               "href": "https://www.google.com/maps/search/?api=1&query=Esse%20Taco%20Brooklyn%20NY"
             },
             {
@@ -321,7 +303,7 @@ const site = {
               "lat": 40.716421,
               "lng": -73.949463,
               "neighborhood": "Williamsburg",
-              "description": "Ukrainian comfort food in Williamsburg.",
+              "description": "Ukrainian comfort food in Williamsburg... kind of iconic!",
               "href": "https://www.google.com/maps/search/?api=1&query=Veselka%20Williamsburg%20Brooklyn%20NY"
             },
             {
@@ -330,7 +312,7 @@ const site = {
               "lat": 40.686739,
               "lng": -73.966104,
               "neighborhood": "Clinton Hill",
-              "description": "Yummy roman-style pizza.",
+              "description": "Our go-to pizza spot in this neighborhood.",
               "href": "https://www.google.com/maps/search/?api=1&query=Impasto%20Brooklyn%20NY"
             },
             {
@@ -348,7 +330,7 @@ const site = {
               "lat": 40.705524,
               "lng": -73.922673,
               "neighborhood": "Bushwick",
-              "description": "Modern Persian cooking and one of Chris's favorites.",
+              "description": "One of our favorite restaurants...",
               "href": "https://www.google.com/maps/search/?api=1&query=Eyval%20Brooklyn%20NY"
             },
             {
@@ -366,7 +348,7 @@ const site = {
               "lat": 40.727111,
               "lng": -73.955720,
               "neighborhood": "Greenpoint",
-              "description": "Japanese-inspired cooking in a beautiful space.",
+              "description": "Japanese-inspired cooking in a pretty space.",
               "href": "https://www.google.com/maps/search/?api=1&query=Rule%20Of%20Thirds%20Brooklyn%20NY"
             },
             {
@@ -393,7 +375,7 @@ const site = {
               "lat": 40.689743,
               "lng": -73.968636,
               "neighborhood": "Clinton Hill",
-              "description": "AMAZING Latin American cooking & cocktails.",
+              "description": "AMAZING Latin American cooking & cocktails... we love it here!",
               "href": "https://www.google.com/maps/search/?api=1&query=Colonia%20Verde%20Brooklyn%20NY"
             },
             {
@@ -402,7 +384,7 @@ const site = {
               "lat": 40.725845,
               "lng": -73.944200,
               "neighborhood": "Greenpoint",
-              "description": "Wine bar where Michael and Chris celebrated their first Valentine's Day together.",
+              "description": "Wine bar where Michael and Chris celebrated their first Valentine's Day together. <3",
               "href": "https://www.google.com/maps/search/?api=1&query=Lovebirds%20Brooklyn%20NY"
             },
             {
@@ -422,24 +404,6 @@ const site = {
               "neighborhood": "Greenpoint",
               "description": "Cocktails in a cozy atmosphere.",
               "href": "https://www.google.com/maps/search/?api=1&query=Little%20Rascal%20Brooklyn%20NY"
-            },
-            {
-              "title": "El Pingüino",
-              "category": "Drinks",
-              "lat": 40.729841,
-              "lng": -73.957428,
-              "neighborhood": "Greenpoint",
-              "description": "Seafood & martinis!",
-              "href": "https://www.google.com/maps/search/?api=1&query=El%20Ping%C3%BCino%20Brooklyn%20NY"
-            },
-            {
-              "title": "Karasu",
-              "category": "Drinks",
-              "lat": 40.689411,
-              "lng": -73.973256,
-              "neighborhood": "Boerum Hill",
-              "description": "Japanese speakeasy tucked behind Walter's.",
-              "href": "https://www.google.com/maps/search/?api=1&query=Karasu%20Brooklyn%20NY"
             },
             {
               "title": "Anaïs",
@@ -465,17 +429,8 @@ const site = {
               "lat": 40.766865,
               "lng": -73.938483,
               "neighborhood": "Long Island City",
-              "description": "A lovely museum devoted to Isamu Noguchi's work.",
+              "description": "A lovely museum devoted to Isamu Noguchi's work... do not skip the gift shop!",
               "href": "https://www.google.com/maps/search/?api=1&query=The%20Noguchi%20Museum%20Queens%20NY"
-            },
-            {
-              "title": "Gantry Plaza State Park",
-              "category": "Sights",
-              "lat": 40.745996,
-              "lng": -73.957643,
-              "neighborhood": "Long Island City",
-              "description": "Waterfront views of Manhattan and iconic gantries.",
-              "href": "https://www.google.com/maps/search/?api=1&query=Gantry%20Plaza%20State%20Park%20Queens%20NY"
             },
             {
               "title": "Fort Greene Park",
