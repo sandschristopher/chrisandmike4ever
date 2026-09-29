@@ -236,10 +236,15 @@ function renderCanvasItem(item) {
         preferCanvas: true
       });
 
-      L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-        maxZoom: 19,
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors'
-      }).addTo(map);
+      L.tileLayer(
+        "https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png?key=cb1_43p1_1_f23c6c2afd9692529096da84",
+        {
+          maxZoom: 19,
+          attribution:
+            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+            '&copy; <a href="https://carto.com/attributions">CARTO</a>'
+        }
+      ).addTo(map);
 
       const markerLayer = L.layerGroup().addTo(map);
       const markers = [];
