@@ -237,7 +237,7 @@ function renderCanvasItem(item) {
       });
 
       L.tileLayer(
-        "https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png?key=cb1_43p1_1_f23c6c2afd9692529096da84",
+        "https://basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png?key=cb1_43p1_1_f23c6c2afd9692529096da84",
         {
           maxZoom: 19,
           attribution:
